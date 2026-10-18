@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Weather App</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="flex flex-wrap justify-center items-center bg-gray-900 min-h-screen text-white p-4">
+
+    <div class="weatherCard bg-neutral-900/20 shadow-[0_0_15px_rgba(255,255,255,0.1)] p-6 w-[450px] rounded-3xl backdrop-blur-xl border border-gray-800 flex flex-col justify-between">
+
+        <!-- Top Section -->
+        <div>
+            <div class="logo flex gap-3 justify-center items-center bg-neutral-900/40 backdrop-blur-2xl backdrop-saturate-200 px-4 py-2 rounded-3xl ring-1 ring-gray-700/50 shadow-inner">
+                <div class="img w-[35px] flex justify-center items-center">
+                    <img class="rounded-full object-cover" src="images/logo.png" alt="Nexus Weather">
+                </div>
+                <div class="text-2xl font-extrabold tracking-wide">Nexus Weather</div>
+            </div>
+
+            <hr class="border-gray-800 my-6 mx-4">
+
+            <div class="flex justify-center gap-2 items-center mb-4  ">
+            <input id="search" class="border rounded-2xl p-3 h-[30px]" type="text" placeholder="Enter City Name">
+            <button id="searchBtn" class="bg-orange-400 items-center h-[30px] w-[40px] rounded-2xl cursor-pointer hover:scale-[1.2] duration-500  "><img class="w-[25px] mb-0.5 mx-2 " src="images/search-icon-png-5.png" alt=""></button>
+            </div>
+
+            <!-- Main Temp Display -->
+            <div class="main bg-neutral-900/40 backdrop-blur-2xl backdrop-saturate-200 ring-1 ring-gray-700/50 rounded-3xl py-6 flex items-center justify-center shadow-lg">
+                <div class="mainBox flex flex-col items-center">
+                    <div class="temp text-5xl font-bold mb-2 tracking-tight">
+                        40°C
+                    </div>
+                    <div class="flex gap-2 items-center text-gray-300">
+                        <div class="city text-lg font-medium">
+                            CityName
+                        </div>
+                        <span class="country text-xs font-semibold uppercase bg-gray-800 px-2 py-0.5 rounded-md border border-gray-700">PK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="flex justify-between items-center gap-4 bg-neutral-900/40 backdrop-blur-2xl backdrop-saturate-200 p-5 rounded-3xl ring-1 ring-gray-700/50 mt-6 shadow-lg">
+            
+            
+            <div class="flex items-center gap-3 w-1/2">
+                <img class="w-[36px] h-[36px] object-contain shrink-0" src="images/humidityicon.png" alt="Humidity">
+                <div class="flex flex-col">
+                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Humidity</span>
+                    <div class="humidity text-lg font-bold">
+                        20%
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="flex items-center gap-3 w-1/2 border-l border-gray-800 pl-4">
+                <img class="w-[36px] h-[36px] object-contain rounded-full shrink-0" src="images/windspeed.jpg" alt="Wind Speed">
+                <div class="flex flex-col">
+                    <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Wind Speed</span>
+                    <div class="wind text-lg font-bold whitespace-nowrap">
+                        10 m/s
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="/script.js"></script>
+</body>
+
+</html>
